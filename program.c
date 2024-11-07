@@ -10,7 +10,7 @@ int find_greatest_common_divisor(int a, int b)
     {
         a >>= 1;
         b >>= 1;
-        g >>= 1;
+        g <<= 1;
     }
     
     while (a)
