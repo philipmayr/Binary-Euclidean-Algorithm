@@ -4,13 +4,14 @@
 
 int find_greatest_common_divisor(int a, int b)
 {
-    int greatest_common_divisor = 1;
+    // great common divisor
+    int c = 1;
     
     while ((~a & 1) && (~b & 1))
     {
         a >>= 1;
         b >>= 1;
-        greatest_common_divisor <<= 1;
+        c <<= 1;
     }
     
     while (a)
@@ -22,7 +23,7 @@ int find_greatest_common_divisor(int a, int b)
         else b = (b - a) >> 1;
     }
     
-    return greatest_common_divisor * b;
+    return c * b;
 }
 
 int main()
